@@ -1,0 +1,16 @@
+(lat as text, lon as text) =>
+let
+    Source = Json.Document(Web.Contents("https://nominatim.openstreetmap.org/reverse?format=json&lat=" & lat & "&lon=" & lon)),
+    address = try Source[display_name] otherwise null
+in
+    address
+
+
+Tarakanda - Dhobaura Road, Dhubaura, ধোবাউড়া, ধোবাউড়া উপজেলা, ময়মনসিংহ জেলা, ময়মনসিংহ বিভাগ, বাংলাদেশ
+
+Dhara, হালুয়াঘাট উপজেলা, ময়মনসিংহ জেলা, ময়মনসিংহ বিভাগ, বাংলাদেশ
+
+Misti Mela মিষ্টি মেলা, চট্টগ্রাম-কক্সবাজার মহাসড়ক, কেরানি হাট, লোহাগাড়া, চট্টগ্রাম জেলা, Chittagong Division, বাংলাদেশ
+---------
+
+
